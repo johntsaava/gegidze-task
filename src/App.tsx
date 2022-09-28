@@ -21,7 +21,8 @@ const Main = styled("main")`
   background-color: #fff;
   border-radius: 2rem;
   overflow: hidden;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
   height: 100%;
   display: flex;
   flex-direction: column;

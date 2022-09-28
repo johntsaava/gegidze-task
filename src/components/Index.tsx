@@ -19,6 +19,7 @@ const AddLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 15px 0px rgb(0 0 0 / 50%);
 `;
 
 export const Index = observer(({ store }: { store: ObservableTodoStore }) => {

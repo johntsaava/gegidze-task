@@ -51,6 +51,7 @@ const AddButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 10px 15px 0px rgb(0 0 0 / 50%);
 `;
 
 export const AddForm = observer(({ store }: { store: ObservableTodoStore }) => {
