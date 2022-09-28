@@ -13,7 +13,7 @@ const Root = styled("div")`
 const Main = styled("div")`
   display: flex;
   border-left: 2px solid #262626;
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
@@ -78,10 +78,11 @@ export const CompleteCheckbox = styled(CheckboxPrimitive.Root)`
   }
   &[data-state="checked"] {
     border-color: green;
+    background: green;
   }
 `;
 export const CompleteCheckboxIndicator = styled(CheckboxPrimitive.Indicator)`
-  color: green;
+  color: #fff;
   display: flex;
 `;
 

@@ -15,7 +15,7 @@ const Form = styled.form`
   display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 1rem 2rem 1rem 0;
+  padding: 1rem 0;
 `;
 
 const Paragraph = styled.p`

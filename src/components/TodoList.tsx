@@ -8,8 +8,9 @@ const Root = styled("div")`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  overflow-y: overlay;
-  padding-right: 1rem;
+  &:last-child {
+    margin-bottom: 100px;
+  }
 `;
 
 export const TodoList = observer(

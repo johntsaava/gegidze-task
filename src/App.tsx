@@ -19,7 +19,6 @@ const Root = styled("div")`
 const Main = styled("main")`
   position: relative;
   background-color: #fff;
-  padding: 2rem;
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;

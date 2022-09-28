@@ -34,6 +34,10 @@ export const Index = observer(({ store }: { store: ObservableTodoStore }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        style={{
+          padding: "2rem",
+          overflow: "auto",
+        }}
       >
         <QueryForm store={store} />
         <BatchForm store={store} />
