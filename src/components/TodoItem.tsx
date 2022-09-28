@@ -12,7 +12,7 @@ const Root = styled("div")`
 
 const Main = styled("div")`
   display: flex;
-  border-left: 2px solid #262626;
+  border-left: 2px solid #0d0d0d;
   padding: 1rem 0 1rem 1rem;
   flex-grow: 1;
   justify-content: space-between;
@@ -41,7 +41,7 @@ export const SelectCheckbox = styled(CheckboxPrimitive.Root)`
   height: 20px;
   padding: 0;
   border-radius: 0.25rem;
-  border: 1px solid #262626;
+  border: 1px solid #0d0d0d;
   background: transparent;
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ export const SelectCheckbox = styled(CheckboxPrimitive.Root)`
     cursor: default;
   }
   &[data-state="checked"] {
-    background: #262626;
+    background: #0d0d0d;
   }
 `;
 export const SelectCheckboxIndicator = styled(CheckboxPrimitive.Indicator)`
@@ -66,7 +66,7 @@ export const CompleteCheckbox = styled(CheckboxPrimitive.Root)`
   height: 2rem;
   padding: 0;
   border-radius: 2rem;
-  border: 1px solid #262626;
+  border: 1px solid #0d0d0d;
   background: transparent;
   display: flex;
   align-items: center;
@@ -77,8 +77,8 @@ export const CompleteCheckbox = styled(CheckboxPrimitive.Root)`
     cursor: default;
   }
   &[data-state="checked"] {
-    border-color: green;
-    background: green;
+    border-color: #05c148;
+    background: #05c148;
   }
 `;
 export const CompleteCheckboxIndicator = styled(CheckboxPrimitive.Indicator)`

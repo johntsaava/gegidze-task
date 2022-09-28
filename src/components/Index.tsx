@@ -14,7 +14,7 @@ const AddLink = styled(Link)`
   width: 4rem;
   height: 4rem;
   border-radius: 2rem;
-  background-color: #262626;
+  background-color: #0d0d0d;
   color: #fff;
   display: flex;
   align-items: center;

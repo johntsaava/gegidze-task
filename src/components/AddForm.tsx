@@ -13,7 +13,7 @@ const CloseLink = styled(Link)`
   top: 2rem;
   left: 2rem;
   border: none;
-  color: #262626;
+  color: #0d0d0d;
   width: 4rem;
   height: 4rem;
   border-radius: 2rem;
@@ -38,7 +38,7 @@ const Input = styled.input`
   font-size: 1.125rem;
   padding: 1rem;
   border: none;
-  border-bottom: 1px solid #262626;
+  border-bottom: 1px solid #0d0d0d;
 `;
 
 const AddButton = styled.button`
@@ -46,7 +46,7 @@ const AddButton = styled.button`
   height: 4rem;
   border: none;
   border-radius: 2rem;
-  background-color: #262626;
+  background-color: #0d0d0d;
   color: #fff;
   display: flex;
   align-items: center;

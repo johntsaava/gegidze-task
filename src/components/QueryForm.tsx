@@ -22,7 +22,7 @@ const Input = styled.input`
   font-size: 1.125rem;
   padding: 1rem;
   border: none;
-  border-bottom: 1px solid #262626;
+  border-bottom: 1px solid #0d0d0d;
   width: 100%;
 `;
 
@@ -41,12 +41,12 @@ const ToggleGroupRoot = styled(ToggleGroup.Root)`
 `;
 
 const ToggleGroupItem = styled(ToggleGroup.Item)`
-  border: 1px solid #262626;
+  border: 1px solid #0d0d0d;
   border-radius: 0.25rem;
   background: none;
   cursor: pointer;
   &[data-state="on"] {
-    background: #262626;
+    background: #0d0d0d;
     color: #fff;
   }
 `;

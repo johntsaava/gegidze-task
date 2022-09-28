@@ -5,6 +5,7 @@ export const GlobalStyle = createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
+    outline-color: #BFBEB0;
   }
 
   body,
@@ -33,6 +34,6 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #eee;
+    background-color: #D9D8D0;
   }
 `;
