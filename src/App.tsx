@@ -1,11 +1,11 @@
 import { observer } from "mobx-react-lite";
 import styled from "styled-components";
-import { AddForm } from "./components/AddForm";
 import { Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import { ObservableTodoStore } from "./store";
 import { Index } from "./components/Index";
+import { AddForm } from "./components/AddForm";
 
 const Root = styled("div")`
   margin: auto;

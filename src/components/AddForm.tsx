@@ -2,9 +2,11 @@ import React from "react";
 import { observer } from "mobx-react-lite";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 import { ObservableTodoStore } from "../store";
-import { Link, useNavigate } from "react-router-dom";
+import { PlusIcon } from "./icons/plus";
+import { ArrowUturnLeftIcon } from "./icons/arrow-uturn-left";
 
 const CloseLink = styled(Link)`
   position: absolute;
@@ -73,21 +75,7 @@ export const AddForm = observer(({ store }: { store: ObservableTodoStore }) => {
         exit={{ opacity: 0 }}
       >
         <CloseLink to="../">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            height={24}
-            width={24}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"
-            />
-          </svg>
+          <ArrowUturnLeftIcon />
         </CloseLink>
       </motion.div>
       <motion.div
@@ -111,21 +99,7 @@ export const AddForm = observer(({ store }: { store: ObservableTodoStore }) => {
         }}
       >
         <AddButton type="submit">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            height={24}
-            width={24}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 4.5v15m7.5-7.5h-15"
-            />
-          </svg>
+          <PlusIcon />
         </AddButton>
       </motion.div>
     </Form>

@@ -2,6 +2,8 @@ import { observer } from "mobx-react-lite";
 import styled from "styled-components";
 
 import { ObservableTodoStore } from "../store";
+import { CheckIcon } from "./icons/check";
+import { XmarkIcon } from "./icons/x-mark";
 import {
   CompleteCheckbox,
   CompleteCheckboxIndicator,
@@ -27,8 +29,12 @@ const DeleteButton = styled("button")`
   height: 24px;
   border: none;
   background: none;
+  cursor: pointer;
   padding: 0;
   margin-right: auto;
+  &:disabled {
+    cursor: default;
+  }
 `;
 
 export const BatchForm = observer(
@@ -42,21 +48,7 @@ export const BatchForm = observer(
           }}
         >
           <SelectCheckboxIndicator>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              width={16}
-              height={16}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l6 6 9-13.5"
-              />
-            </svg>
+            <CheckIcon width={16} height={16} />
           </SelectCheckboxIndicator>
         </SelectCheckbox>
 
@@ -65,19 +57,7 @@ export const BatchForm = observer(
           disabled={store.selectedTodosCount === 0}
           onClick={() => store.batchDelete()}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            width={24}
-            height={24}
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <XmarkIcon />
         </DeleteButton>
 
         <CompleteCheckbox
@@ -85,21 +65,7 @@ export const BatchForm = observer(
           onCheckedChange={(checked) => store.batchComplete(checked as boolean)}
         >
           <CompleteCheckboxIndicator>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              width={24}
-              height={24}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l6 6 9-13.5"
-              />
-            </svg>
+            <CheckIcon width={24} height={24} />
           </CompleteCheckboxIndicator>
         </CompleteCheckbox>
       </Form>

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
 
 import { ObservableTodoStore, QueryType } from "../store";
+import { XmarkIcon } from "./icons/x-mark";
 
 const Root = styled.div`
   display: flex;
@@ -30,6 +31,7 @@ const ClearButton = styled("button")`
   height: 24px;
   border: none;
   background: none;
+  cursor: pointer;
   padding: 0;
 `;
 
@@ -37,10 +39,12 @@ const ToggleGroupRoot = styled(ToggleGroup.Root)`
   display: flex;
   gap: 0.5rem;
 `;
+
 const ToggleGroupItem = styled(ToggleGroup.Item)`
   border: 1px solid #262626;
   border-radius: 0.25rem;
   background: none;
+  cursor: pointer;
   &[data-state="on"] {
     background: #262626;
     color: #fff;
@@ -70,19 +74,7 @@ export const QueryForm = observer(
               }
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              width={24}
-              height={24}
-            >
-              <path
-                fillRule="evenodd"
-                d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-                clipRule="evenodd"
-              />
-            </svg>
+            <XmarkIcon />
           </ClearButton>
         </Form>
 

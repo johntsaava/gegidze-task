@@ -31,6 +31,7 @@ const DeleteButton = styled("button")`
   height: 24px;
   border: none;
   background: none;
+  cursor: pointer;
   padding: 0;
 `;
 
@@ -45,8 +46,10 @@ export const SelectCheckbox = styled(CheckboxPrimitive.Root)`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   &:disabled {
     opacity: 0.25;
+    cursor: default;
   }
   &[data-state="checked"] {
     background: #262626;
@@ -68,8 +71,10 @@ export const CompleteCheckbox = styled(CheckboxPrimitive.Root)`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   &:disabled {
     opacity: 0.25;
+    cursor: default;
   }
   &[data-state="checked"] {
     border-color: green;
