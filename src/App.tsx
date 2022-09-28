@@ -1,13 +1,11 @@
-import React from "react";
 import { observer } from "mobx-react-lite";
 import styled from "styled-components";
 import { AddForm } from "./components/AddForm";
-import { BatchForm } from "./components/BatchForm";
-import { QueryForm } from "./components/QueryForm";
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
-import { TodoList } from "./components/TodoList";
 import { ObservableTodoStore } from "./store";
+import { Index } from "./components/Index";
 
 const Root = styled("div")`
   margin: auto;
@@ -30,65 +28,27 @@ const Main = styled("main")`
   flex-direction: column;
 `;
 
-const AddLink = styled(Link)`
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4rem;
-  height: 4rem;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  background-color: #262626;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
 const App = observer(({ store }: { store: ObservableTodoStore }) => {
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <Root>
-            <Main>
-              <Outlet />
-            </Main>
-          </Root>
-        }
-      >
+    <AnimatePresence exitBeforeEnter>
+      <Routes location={location} key={location.pathname}>
         <Route
-          index
+          path="/"
           element={
-            <React.Fragment>
-              <QueryForm store={store} />
-              <BatchForm store={store} />
-              <TodoList store={store} />
-              <AddLink to="/add">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  height={24}
-                  width={24}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
-                  />
-                </svg>
-              </AddLink>
-            </React.Fragment>
+            <Root>
+              <Main>
+                <Outlet />
+              </Main>
+            </Root>
           }
-        />
-        <Route path="add" element={<AddForm store={store} />} />
-      </Route>
-    </Routes>
+        >
+          <Route index element={<Index store={store} />} />
+          <Route path="add" element={<AddForm store={store} />} />
+        </Route>
+      </Routes>
+    </AnimatePresence>
   );
 });
 
