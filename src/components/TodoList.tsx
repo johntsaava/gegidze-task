@@ -9,7 +9,7 @@ const Root = styled("div")`
   flex-direction: column;
   gap: 1rem;
   &:last-child {
-    margin-bottom: 100px;
+    margin-bottom: 6rem;
   }
 `;
 

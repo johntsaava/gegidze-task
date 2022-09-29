@@ -27,8 +27,8 @@ const Input = styled.input`
 `;
 
 const ClearButton = styled("button")`
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border: none;
   background: none;
   cursor: pointer;

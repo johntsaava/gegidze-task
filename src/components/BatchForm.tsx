@@ -19,15 +19,17 @@ const Form = styled.form`
 `;
 
 const DeleteButton = styled("button")`
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   border: none;
   background: none;
   cursor: pointer;
   padding: 0;
   margin-right: auto;
   color: #734230;
+  display: flex;
   &:disabled {
+    opacity: 0.25;
     cursor: default;
   }
 `;

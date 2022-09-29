@@ -9,9 +9,6 @@ import { PlusIcon } from "./icons/plus";
 import { ArrowUturnLeftIcon } from "./icons/arrow-uturn-left";
 
 const CloseLink = styled(Link)`
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
   border: none;
   color: #0d0d0d;
   width: 4rem;
@@ -74,6 +71,11 @@ export const AddForm = observer(({ store }: { store: ObservableTodoStore }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
+        style={{
+          position: "absolute",
+          top: "2rem",
+          left: "2rem",
+        }}
       >
         <CloseLink to="../">
           <ArrowUturnLeftIcon />

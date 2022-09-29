@@ -31,19 +31,20 @@ const Label = styled.label`
 `;
 
 const DeleteButton = styled("button")`
-  width: 24px;
-  height: 24px;
+  width: 1.5;
+  height: 1.5;
   border: none;
   background: none;
   cursor: pointer;
   padding: 0;
   color: #734230;
+  display: flex;
 `;
 
 export const SelectCheckbox = styled(CheckboxPrimitive.Root)`
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   padding: 0;
   border-radius: 0.25rem;
   border: 2px solid #734230;
