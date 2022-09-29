@@ -12,8 +12,6 @@ const Root = styled("div")`
   padding: 2rem;
   max-width: 40rem;
   width: 100%;
-  height: 100%;
-  max-height: 44rem;
 `;
 
 const Main = styled("main")`
@@ -23,9 +21,9 @@ const Main = styled("main")`
   overflow: hidden;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 40rem;
 `;
 
 const App = observer(({ store }: { store: ObservableTodoStore }) => {

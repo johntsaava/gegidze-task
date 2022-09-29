@@ -23,7 +23,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    height: 100%;
+    min-height: 100vh;
   }
 
   body {
@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: #D9D8D0;

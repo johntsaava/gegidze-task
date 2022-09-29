@@ -96,7 +96,7 @@ export const Add = observer(({ store }: { store: ObservableTodoStore }) => {
         }}
         exit={{
           top: 187,
-          borderBottom: "none",
+          borderColor: "rgba(0,0,0,0)",
           backgroundColor: "#f2f2f2",
           left: 32,
           right: 32,
