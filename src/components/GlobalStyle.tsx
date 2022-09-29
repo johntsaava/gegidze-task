@@ -21,9 +21,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  html,
+  html {
+    height: 100%;
+  }
+
   body {
-    min-height: 100vh;
+    min-height: 100%;
   }
 
   body {
@@ -31,7 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    min-height: 100vh;
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-direction: column;
     background-color: #D9D8D0;

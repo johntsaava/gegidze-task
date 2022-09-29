@@ -23,7 +23,7 @@ const Main = styled("main")`
     0 8px 10px -6px rgb(0 0 0 / 0.1);
   display: flex;
   flex-direction: column;
-  height: 40rem;
+  height: 38rem;
 `;
 
 const App = observer(({ store }: { store: ObservableTodoStore }) => {
