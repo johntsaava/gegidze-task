@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    min-height: 100%;
+    height: 100%;
   }
 
   body {
@@ -34,8 +34,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    position: absolute;
-    inset: 0;
+    height: 100%;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     background-color: #D9D8D0;
