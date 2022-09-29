@@ -13,15 +13,9 @@ import {
 
 const Form = styled.form`
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
-  padding: 1rem 0;
-`;
-
-const Paragraph = styled.p`
-  width: 100%;
-  font-style: italic;
-  font-size: 0.875rem;
+  padding: 1rem;
 `;
 
 const DeleteButton = styled("button")`
@@ -32,6 +26,7 @@ const DeleteButton = styled("button")`
   cursor: pointer;
   padding: 0;
   margin-right: auto;
+  color: #734230;
   &:disabled {
     cursor: default;
   }

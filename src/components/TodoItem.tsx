@@ -3,21 +3,24 @@ import styled from "styled-components";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 
 import { ObservableTodoStore, Todo } from "../store";
+import { XmarkIcon } from "./icons/x-mark";
 
 const Root = styled("div")`
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  border-radius: 0.5rem;
 `;
 
 const Main = styled("div")`
   display: flex;
-  border-left: 2px solid #0d0d0d;
-  padding: 1rem 0 1rem 1rem;
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+  margin-left: 0.5rem;
 `;
 
 const Label = styled.label`
@@ -33,15 +36,16 @@ const DeleteButton = styled("button")`
   background: none;
   cursor: pointer;
   padding: 0;
+  color: #734230;
 `;
 
 export const SelectCheckbox = styled(CheckboxPrimitive.Root)`
   flex-shrink: 0;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   padding: 0;
   border-radius: 0.25rem;
-  border: 1px solid #0d0d0d;
+  border: 2px solid #734230;
   background: transparent;
   display: flex;
   align-items: center;
@@ -52,7 +56,7 @@ export const SelectCheckbox = styled(CheckboxPrimitive.Root)`
     cursor: default;
   }
   &[data-state="checked"] {
-    background: #0d0d0d;
+    background: #734230;
   }
 `;
 export const SelectCheckboxIndicator = styled(CheckboxPrimitive.Indicator)`
@@ -66,7 +70,7 @@ export const CompleteCheckbox = styled(CheckboxPrimitive.Root)`
   height: 2rem;
   padding: 0;
   border-radius: 2rem;
-  border: 1px solid #0d0d0d;
+  border: 1px solid #734230;
   background: transparent;
   display: flex;
   align-items: center;
@@ -114,19 +118,7 @@ export const TodoItem = observer(
         </SelectCheckbox>
 
         <DeleteButton type="button" onClick={() => store.deleteTodo(todo.id)}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            width={24}
-            height={24}
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <XmarkIcon />
         </DeleteButton>
 
         <Main>
