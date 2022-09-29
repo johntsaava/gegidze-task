@@ -13,10 +13,16 @@ const Root = styled("div")`
   }
 `;
 
+const Paragraph = styled.p`
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+`;
+
 export const TodoList = observer(
   ({ store }: { store: ObservableTodoStore }) => {
     if (store.queriedTodos.length === 0) {
-      return <p>No todos found</p>;
+      return <Paragraph>Nothing To-Do</Paragraph>;
     }
 
     return (
