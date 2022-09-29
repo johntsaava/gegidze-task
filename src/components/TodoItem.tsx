@@ -4,6 +4,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 
 import { ObservableTodoStore, Todo } from "../store";
 import { XmarkIcon } from "./icons/x-mark";
+import { CheckIcon } from "./icons/check";
 
 const Root = styled("div")`
   display: flex;
@@ -99,21 +100,7 @@ export const TodoItem = observer(
           onCheckedChange={() => store.toggleSelect(todo.id)}
         >
           <SelectCheckboxIndicator>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              width={16}
-              height={16}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 12.75l6 6 9-13.5"
-              />
-            </svg>
+            <CheckIcon width={16} height={16} />
           </SelectCheckboxIndicator>
         </SelectCheckbox>
 
@@ -129,21 +116,7 @@ export const TodoItem = observer(
             onCheckedChange={() => store.toggleComplete(todo.id)}
           >
             <CompleteCheckboxIndicator>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                width={24}
-                height={24}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
+              <CheckIcon />
             </CompleteCheckboxIndicator>
           </CompleteCheckbox>
         </Main>
