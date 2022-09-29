@@ -21,21 +21,22 @@ const CloseLink = styled(Link)`
 `;
 
 const Form = styled.form`
-  position: absolute;
-  inset: 0;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  position: relative;
+  height: 100%;
 `;
 
 const Input = styled.input`
   font-size: 1.125rem;
-  padding: 1rem;
+  padding: 1.319rem 1rem;
   border: none;
-  border-bottom: 1px solid #0d0d0d;
+  background: none;
+  width: 100%;
 `;
 
 const AddButton = styled.button`
@@ -62,7 +63,7 @@ export const Add = observer(({ store }: { store: ObservableTodoStore }) => {
 
         if (inputRef.current) {
           store.addTodo(inputRef.current.value);
-          inputRef.current.value = "";
+          inputRef.current.blur();
           navigate("../");
         }
       }}
@@ -82,9 +83,30 @@ export const Add = observer(({ store }: { store: ObservableTodoStore }) => {
         </CloseLink>
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+        initial={{
+          top: 250,
+          borderBottom: "1px solid #0d0d0d",
+          backgroundColor: "transparent",
+          opacity: 0,
+          left: 64,
+          right: 64,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        exit={{
+          top: 187,
+          borderBottom: "none",
+          backgroundColor: "#f2f2f2",
+          left: 32,
+          right: 32,
+          borderRadius: "0.5rem",
+          paddingLeft: 66,
+          opacity: 0,
+        }}
+        style={{
+          position: "absolute",
+        }}
       >
         <Input ref={inputRef} autoFocus required placeholder="Enter title..." />
       </motion.div>

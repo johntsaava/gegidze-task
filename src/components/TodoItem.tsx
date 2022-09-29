@@ -29,10 +29,10 @@ const Label = styled.label<{
 }>`
   font-size: 1.125rem;
   width: 100%;
-  font-weight: ${({ $completed }) => ($completed ? 400 : 500)};
   font-style: ${({ $completed }) => ($completed ? "italic" : "normal")};
   text-decoration: ${({ $completed }) =>
     $completed ? "line-through" : "none"};
+  word-break: break-all;
 `;
 
 const DeleteButton = styled("button")`
