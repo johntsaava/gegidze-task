@@ -61,7 +61,7 @@ export const QueryForm = observer(
           <Input
             ref={inputRef}
             type="text"
-            placeholder="Enter title..."
+            placeholder="Search by title..."
             onChange={(e) => store.setQueryText(e.target.value)}
           />
           <ClearButton
