@@ -24,10 +24,15 @@ const Main = styled("div")`
   margin-left: 0.5rem;
 `;
 
-const Label = styled.label`
+const Label = styled.label<{
+  $completed: boolean;
+}>`
   font-size: 1.125rem;
-  font-weight: 500;
   width: 100%;
+  font-weight: ${({ $completed }) => ($completed ? 400 : 500)};
+  font-style: ${({ $completed }) => ($completed ? "italic" : "normal")};
+  text-decoration: ${({ $completed }) =>
+    $completed ? "line-through" : "none"};
 `;
 
 const DeleteButton = styled("button")`
@@ -110,7 +115,9 @@ export const TodoItem = observer(
         </DeleteButton>
 
         <Main>
-          <Label htmlFor={`${todo.id}-completed`}>{todo.title}</Label>
+          <Label htmlFor={`${todo.id}-completed`} $completed={todo.completed}>
+            {todo.title}
+          </Label>
           <CompleteCheckbox
             id={`${todo.id}-completed`}
             checked={todo.completed}
