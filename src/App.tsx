@@ -4,8 +4,8 @@ import { Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
 import { ObservableTodoStore } from "./store";
-import { Index } from "./components/Index";
-import { AddForm } from "./components/AddForm";
+import { Index } from "./pages/Index";
+import { Add } from "./pages/Add";
 
 const Root = styled("div")`
   margin: auto;
@@ -45,7 +45,7 @@ const App = observer(({ store }: { store: ObservableTodoStore }) => {
           }
         >
           <Route index element={<Index store={store} />} />
-          <Route path="add" element={<AddForm store={store} />} />
+          <Route path="add" element={<Add store={store} />} />
         </Route>
       </Routes>
     </AnimatePresence>

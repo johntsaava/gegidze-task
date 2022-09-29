@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { BatchForm } from "./BatchForm";
-import { QueryForm } from "./QueryForm";
-import { TodoList } from "./TodoList";
+import { BatchForm } from "../components/BatchForm";
+import { QueryForm } from "../components/QueryForm";
+import { TodoList } from "../components/TodoList";
 import { ObservableTodoStore } from "../store";
-import { PlusIcon } from "./icons/plus";
+import { PlusIcon } from "../components/icons/plus";
 
 const AddLink = styled(Link)`
   width: 4rem;

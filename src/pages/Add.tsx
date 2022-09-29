@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 
 import { ObservableTodoStore } from "../store";
-import { PlusIcon } from "./icons/plus";
-import { ArrowUturnLeftIcon } from "./icons/arrow-uturn-left";
+import { PlusIcon } from "../components/icons/plus";
+import { ArrowUturnLeftIcon } from "../components/icons/arrow-uturn-left";
 
 const CloseLink = styled(Link)`
   border: none;
@@ -51,7 +51,7 @@ const AddButton = styled.button`
   box-shadow: 0 10px 15px 0px rgb(0 0 0 / 50%);
 `;
 
-export const AddForm = observer(({ store }: { store: ObservableTodoStore }) => {
+export const Add = observer(({ store }: { store: ObservableTodoStore }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
